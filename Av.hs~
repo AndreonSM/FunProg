@@ -1,0 +1,12 @@
+module Av where
+
+-- Versão chibata
+-- Está sem a restrição de "espero que venham Integer" por puro didatismo.
+avRuim :: Integer -> Integer -> Integer
+avRuim x y = div (x+y) 2
+
+-- Versão pica (depois de quebrar a cabeça no porquê "/" não funcionar)
+-- Nas próximas vezes, olhe o type, dumb boy.
+
+avBom :: Fractional a => a  -> a -> a  -- Sem usar o "tipo" dela na hr de def.
+avBom x y = (x+y) / 2
